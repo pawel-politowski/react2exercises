@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Header from './Header';
 import PostTitle from './PostTitle';
@@ -36,9 +36,7 @@ class App extends Component {
         postTitle ={this.state.postDetails.title}
         post={this.state.postDetails.body}
       />
-      <Comment 
-        comment = "Komentarze: "
-      />
+      <Comment />
 
       <Footbar 
         footer = "&copy; Copyright 2020"
