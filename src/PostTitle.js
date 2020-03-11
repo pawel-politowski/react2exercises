@@ -1,7 +1,7 @@
 import React from 'react';
 
 function PostTitle (props){
-    return <div><h3>{props.postTitle}</h3><br/>{props.post}<br/></div>
+    return <div className="postTitle"><h3>{props.postTitle}</h3><br/>{props.post}<br/></div>
         
 }
 

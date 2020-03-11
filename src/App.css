@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+.postTitle{
+  margin: 10px;
+  padding: 10px;
+  background: rgb(130, 140, 194);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

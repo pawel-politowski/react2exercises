@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
 import PostTitle from './PostTitle';
@@ -9,20 +8,27 @@ import Footbar from './Footbar';
 class App extends Component {
   state = {
     postDetails: {},
-    loader: false
+    loader: false,
+    errorCatch: false
   };
 
   componentDidMount() {
     this.setState({loader: true});
+    this.setState({errorCatch: false})
     fetch('https://jsonplaceholder.typicode.com/posts/1')
           .then(response => response.json())
           .then(data => 
-            this.setState({postDetails: data, loader: false,}))
+            this.setState({postDetails: data, loader: false,})) 
+          .catch(error => {                                                  
+              if (error) {
+                  this.setState({errorCatch: true, loader: false})
+              }})      
   }
   render(){
   return (  
     <div>
-      {this.state.loader ? "Ładowanie" : null}
+      {this.state.errorCatch ? "Błąd pobierania danych!!!!" : null}
+      {this.state.loader ? "Ładowanie" : null}      
       <Header 
         title = "Mój Blog"
       />
