@@ -7,14 +7,16 @@ import Contact from './pages/Contact';
 import About from './pages/About';
 import Default from './pages/Default'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Menu from './Menu';
 
 ReactDOM.render(
     <BrowserRouter>
+        <Menu />
         <Switch>
             <Route exact path="/" component={App} />
             <Route exact path='/contact' component={Contact} />
             <Route exact path='/about' component={About} />
-            <Route component={Default} />
+            <Route component={Default} />            
         </Switch>
     </BrowserRouter>,
     document.getElementById('root')

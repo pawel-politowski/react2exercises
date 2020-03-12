@@ -26,7 +26,7 @@ class App extends Component {
   }
   render(){
   return (  
-    <div>
+    <div>     
       {this.state.errorCatch ? "Błąd pobierania danych!!!!" : null}
       {this.state.loader ? "Ładowanie" : null}      
       <Header 
